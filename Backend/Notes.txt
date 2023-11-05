@@ -1,0 +1,14 @@
+Why use Redis for Session Storage?
+=====================================
+Redis is an in-memory database that can store and persist multiple data formats. We will 
+use Redis as an in-memory data store to save sessions. Reasons for using Redis storage in 
+this use case include the following:
+
+Due to security reasons, it is not advisable to save session IDs in the browser. Redis 
+makes a good choice to save the session on the server side.
+Easy to manage session caches. You can log out of the current browser session anytime using 
+the Redis session cache.
+You don’t need to manually encrypt any keys for the Redis session, and Redis will handle 
+this for you.
+Saving a session on the client means higher CPU usage is required to ensure the safe 
+transfer of data, and this is not the case when using an in-memory database such as Redis.
